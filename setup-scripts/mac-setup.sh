@@ -36,12 +36,12 @@ else
   echo "dfci alias already exists, skipping..."
 fi
 
-# Add storage alias
-if ! grep -q "alias storage=" ~/.zprofile; then
+# Add ehda alias
+if ! grep -q "alias ehda=" ~/.zprofile; then
   echo "Adding storage alias..."
-  echo "alias storage='cd /Volumes/aditya4T'" >> ~/.zprofile
+  echo "alias ehda='cd /Volumes/aditya4T'" >> ~/.zprofile
 else
-  echo "storage alias already exists, skipping..."
+  echo "ehda alias already exists, skipping..."
 fi
 
 # Add SSH Agent
