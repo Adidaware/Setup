@@ -96,3 +96,18 @@ echo "  dfci      - Go to DFCI folder"
 echo "  storage   - Go to external drive"
 echo "  vmdownload /path/on/vm ~/local/path  - Download from VM"
 echo ""
+
+# Setup Emacs configuration
+if [ ! -d ~/.emacs.d ]; then
+  echo "Creating ~/.emacs.d..."
+  mkdir -p ~/.emacs.d
+fi
+
+if [ ! -f ~/.emacs.d/init.el ] || ! grep -q "toggle-truncate-lines" ~/.emacs.d/init.el; then
+  echo "Setting up Emacs configuration..."
+  cp emacs/init.el ~/.emacs.d/init.el
+else
+  echo "Emacs configuration already exists, skipping..."
+fi
+
+
