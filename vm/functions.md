@@ -16,6 +16,9 @@ cleanup() {
   rm -rf /mnt/wgs/tmp/*
   rm -rf /tmp/*
   rm -rf /mnt/wgs2/tmp/*
+  # Remove emacs backup files:
+  find ~ -name '##*' -delete 2>/dev/null
+  find ~ -name '*~' -delete 2>/dev/null
   echo "Cleanup complete!"
 }
 ```

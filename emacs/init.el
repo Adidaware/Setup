@@ -1,13 +1,10 @@
 ;;; init.el --- Emacs configuration
 ;;; Commentary:
-;;; Configuration for bioinformatics work with auto-truncate for .bps and .vcf files
+;;; Configuration for bioinformatics work
 ;;; Code:
 
-;; Auto-truncate lines for .bps and .vcf files
-(add-hook 'find-file-hook
-  (lambda ()
-    (when (string-match "\\.\\(bps\\|vcf\\)$" buffer-file-name)
-      (toggle-truncate-lines 1))))
+;; Globally enable line truncation (no soft-wrapping) in all buffers
+(setq-default truncate-lines t)
 
 ;; Optional: Add more Emacs customizations here
 ;; (setq-default line-spacing 0.2)
@@ -15,4 +12,3 @@
 
 (provide 'init)
 ;;; init.el ends here
-

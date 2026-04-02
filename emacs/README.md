@@ -21,11 +21,10 @@ Or use the automated setup script in the root directory.
 
 ## Features
 
-- Auto-truncate lines for `.bps` and `.vcf` files
-- Custom keybindings and settings
+- Globally truncates lines in **all** buffers and file types (no soft-wrapping)
 - Optimized for bioinformatics work
 
 ## Usage
 
-- Open `.bps` or `.vcf` files - lines will automatically truncate
+- Lines are truncated automatically in every file — no special file type needed
 - Restart Emacs if changes don't take effect
